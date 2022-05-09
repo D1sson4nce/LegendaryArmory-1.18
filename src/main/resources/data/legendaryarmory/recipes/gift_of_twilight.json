@@ -1,0 +1,23 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 50,
+      "item": "legendaryarmory:icy_runestone"
+    },
+    {
+      "count": 1,
+      "item": "legendaryarmory:sigil"
+    },
+    {
+      "count": 5,
+      "item": "legendaryarmory:gift_of_metal"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:gift_of_twilight"
+    }
+  ],
+  "successRate": 100
+}

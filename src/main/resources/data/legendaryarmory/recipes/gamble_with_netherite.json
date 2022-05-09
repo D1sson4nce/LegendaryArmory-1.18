@@ -14,16 +14,13 @@
       "item": "minecraft:netherite_sword"
     },
     {
-      "count": 2,
-      "item": "minecraft:nether_star"
+      "count": 1,
+      "item": "minecraft:netherite_sword"
     }
   ],
   "outputs": [
     {
       "item": "legendaryarmory:dusk"
-    },
-    {
-      "item": "legendaryarmory:twilight"
     }
   ],
   "successRate": 0.79

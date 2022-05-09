@@ -2,6 +2,13 @@
   "itemGroup.legendaryarmory.legendary_armory": "Legendary Armory",
   "item.legendaryarmory.twilight": "Twilight",
   "item.legendaryarmory.dusk": "Dusk",
+  "item.legendaryarmory.gift_of_twilight": "Gift of Twilight",
+  "item.legendaryarmory.icy_runestone": "Icy Runestone",
+  "item.legendaryarmory.sigil": "Sigil",
+  "item.legendaryarmory.gift_of_metal": "Gift of Metal",
+
   "block.legendaryarmory.mystic_forge": "Mystic Forge",
+
+
   "container.inventory": ""
 }
