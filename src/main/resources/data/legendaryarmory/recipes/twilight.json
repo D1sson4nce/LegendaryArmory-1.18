@@ -1,0 +1,15 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "legendaryarmory:dusk"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:twilight"
+    }
+  ],
+  "successRate": 100
+}

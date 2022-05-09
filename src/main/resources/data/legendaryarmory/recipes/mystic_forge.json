@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYX",
+    "Y#Y",
+    "XYX"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:water_bucket"
+    },
+    "Y": {
+      "item": "minecraft:nether_star"
+    },
+    "X": {
+      "item": "minecraft:netherite_block"
+    }
+  },
+  "result": {
+    "item": "legendaryarmory:mystic_forge"
+  }
+}

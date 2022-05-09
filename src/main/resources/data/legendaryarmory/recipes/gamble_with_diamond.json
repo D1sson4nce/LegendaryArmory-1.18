@@ -1,0 +1,27 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "minecraft:diamond_sword"
+    },
+    {
+      "count": 1,
+      "item": "minecraft:diamond_sword"
+    },
+    {
+      "count": 1,
+      "item": "minecraft:diamond_sword"
+    },
+    {
+      "count": 1,
+      "item": "minecraft:diamond_sword"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:dusk"
+    }
+  ],
+  "successRate": 0.22
+}
