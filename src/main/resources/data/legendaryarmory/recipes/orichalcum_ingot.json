@@ -1,0 +1,15 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 10,
+      "item": "legendaryarmory:orichalcum_ore"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:orichalcum_ingot"
+    }
+  ],
+  "successRate": 100
+}

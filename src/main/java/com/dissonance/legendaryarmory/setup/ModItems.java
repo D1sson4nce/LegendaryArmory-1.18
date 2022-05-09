@@ -12,7 +12,7 @@ public class ModItems {
     public static final ToolItem TWILIGHT = new SwordItem(TwilightMaterial.INSTANCE, 0, -2F, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).fireproof());
     public static final ToolItem DUSK = new SwordItem(DuskMaterial.INSTANCE, 0, -2.4F, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
     public static final BlockItem MYSTIC_FORGE = new BlockItem(Blocks.MYSTIC_FORGE, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
-    public static final Item GIFT_OF_TWILIGHT = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).maxCount(1));
+    public static final Item GIFT_OF_TWILIGHT = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
     public static final Item ICY_RUNESTONE = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
     public static final Item SIGIL = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
     public static final Item GIFT_OF_METAL = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).maxCount(5));
