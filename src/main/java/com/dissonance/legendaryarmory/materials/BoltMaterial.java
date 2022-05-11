@@ -1,5 +1,6 @@
 package com.dissonance.legendaryarmory.materials;
 
+import com.dissonance.legendaryarmory.setup.ModItems;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
@@ -32,6 +33,6 @@ public class BoltMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return null;
+        return Ingredient.ofItems(ModItems.GIFT_OF_FORTUNE);
     }
 }

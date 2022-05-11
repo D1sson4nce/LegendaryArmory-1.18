@@ -1,5 +1,7 @@
 package com.dissonance.legendaryarmory.materials;
 
+import com.dissonance.legendaryarmory.LegendaryArmory;
+import com.dissonance.legendaryarmory.setup.ModItems;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
@@ -34,6 +36,6 @@ public class TwilightMaterial implements ToolMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.NETHER_STAR);
+        return Ingredient.ofItems(ModItems.GIFT_OF_FORTUNE);
     }
 }

@@ -7,20 +7,20 @@
     },
     {
       "count": 50,
-      "item": "legendaryarmory:mithril_ingot"
+      "item": "legendaryarmory:cured_leather"
     },
     {
       "count": 50,
-      "item": "legendaryarmory:darksteel_ingot"
+      "item": "legendaryarmory:onyx_lodestone"
     },
     {
-      "count": 50,
-      "item": "legendaryarmory:platinum_ingot"
+      "count": 1,
+      "item": "legendaryarmory:gift_of_ascalon"
     }
   ],
   "outputs": [
     {
-      "item": "legendaryarmory:gift_of_metal"
+      "item": "legendaryarmory:gift_of_darkness"
     }
   ],
   "successRate": 100

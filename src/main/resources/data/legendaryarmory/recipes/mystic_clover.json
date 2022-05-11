@@ -1,0 +1,27 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "legendaryarmory:glob_of_ectoplasm"
+    },
+    {
+      "count": 1,
+      "item": "legendaryarmory:mystic_coin"
+    },
+    {
+      "count": 1,
+      "item": "legendaryarmory:obsidian_shard"
+    },
+    {
+      "count": 6,
+      "item": "legendaryarmory:philosophers_stone"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:mystic_clover"
+    }
+  ],
+  "successRate": 33.34
+}

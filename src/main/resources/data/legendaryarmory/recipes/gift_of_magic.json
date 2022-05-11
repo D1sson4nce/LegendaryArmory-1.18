@@ -1,0 +1,27 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 64,
+      "item": "legendaryarmory:vial_of_blood"
+    },
+    {
+      "count": 64,
+      "item": "legendaryarmory:venom_sac"
+    },
+    {
+      "count": 64,
+      "item": "legendaryarmory:totem"
+    },
+    {
+      "count": 64,
+      "item": "legendaryarmory:crystalline_dust"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:gift_of_magic"
+    }
+  ],
+  "successRate": 100
+}

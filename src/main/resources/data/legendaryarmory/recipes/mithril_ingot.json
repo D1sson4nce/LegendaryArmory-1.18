@@ -3,12 +3,12 @@
   "ingredients": [
     {
       "count": 10,
-      "item": "legendaryarmory:raw_orichalcum"
+      "item": "legendaryarmory:raw_mithril"
     }
   ],
   "outputs": [
     {
-      "item": "legendaryarmory:orichalcum_ingot"
+      "item": "legendaryarmory:mithril_ingot"
     }
   ],
   "successRate": 100

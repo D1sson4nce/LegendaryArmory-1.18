@@ -1,0 +1,27 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 64,
+      "item": "legendaryarmory:fang"
+    },
+    {
+      "count": 64,
+      "item": "legendaryarmory:scale"
+    },
+    {
+      "count": 64,
+      "item": "legendaryarmory:claw"
+    },
+    {
+      "count": 64,
+      "item": "legendaryarmory:ancient_bone"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:gift_of_might"
+    }
+  ],
+  "successRate": 100
+}

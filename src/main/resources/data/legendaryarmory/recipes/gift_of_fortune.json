@@ -1,0 +1,27 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 64,
+      "item": "legendaryarmory:glob_of_ectoplasm"
+    },
+    {
+      "count": 64,
+      "item": "legendaryarmory:mystic_clover"
+    },
+    {
+      "count": 1,
+      "item": "legendaryarmory:gift_of_magic"
+    },
+    {
+      "count": 1,
+      "item": "legendaryarmory:gift_of_might"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:gift_of_fortune"
+    }
+  ],
+  "successRate": 100
+}

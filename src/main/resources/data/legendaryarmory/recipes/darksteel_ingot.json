@@ -3,12 +3,16 @@
   "ingredients": [
     {
       "count": 10,
-      "item": "legendaryarmory:raw_orichalcum"
+      "item": "minecraft:raw_iron"
+    },
+    {
+      "count": 5,
+      "item": "minecraft:coal"
     }
   ],
   "outputs": [
     {
-      "item": "legendaryarmory:orichalcum_ingot"
+      "item": "legendaryarmory:darksteel_ingot"
     }
   ],
   "successRate": 100

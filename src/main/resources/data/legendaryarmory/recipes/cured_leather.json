@@ -2,13 +2,13 @@
   "type": "legendaryarmory:mystic_forge",
   "ingredients": [
     {
-      "count": 10,
-      "item": "legendaryarmory:raw_orichalcum"
+      "count": 15,
+      "item": "minecraft:leather"
     }
   ],
   "outputs": [
     {
-      "item": "legendaryarmory:orichalcum_ingot"
+      "item": "legendaryarmory:cured_leather"
     }
   ],
   "successRate": 100

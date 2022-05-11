@@ -1,0 +1,27 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "legendaryarmory:bloodstone_shard"
+    },
+    {
+      "count": 64,
+      "item": "legendaryarmory:obsidian_shard"
+    },
+    {
+      "count": 1,
+      "item": "legendaryarmory:gift_of_exploration"
+    },
+    {
+      "count": 1,
+      "item": "legendaryarmory:gift_of_battle"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:gift_of_mastery"
+    }
+  ],
+  "successRate": 100
+}
