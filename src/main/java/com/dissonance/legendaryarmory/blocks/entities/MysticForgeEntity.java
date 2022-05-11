@@ -140,7 +140,6 @@ public class MysticForgeEntity extends BlockEntity implements NamedScreenHandler
             var rng = new Random();
             var chance = rng.nextFloat(100);
             var adds = chance < match.get().getSuccessRate() ? 1 : 0;
-            System.out.println(chance + " < " + match.get().getSuccessRate());
 
             entity.setStack(4, new ItemStack(match.get().getOutput().getItem(), entity.getStack(4).getCount() + adds));
 

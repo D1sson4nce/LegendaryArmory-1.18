@@ -1,10 +1,12 @@
 package com.dissonance.legendaryarmory;
 
+import com.dissonance.legendaryarmory.events.LootTableLoadingEvent;
 import com.dissonance.legendaryarmory.events.UseBlockEvents;
 import com.dissonance.legendaryarmory.setup.ModItems;
 import com.dissonance.legendaryarmory.setup.Setup;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.advancement.Advancement;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.ShapedRecipe;
@@ -21,5 +23,6 @@ public class LegendaryArmory implements ModInitializer {
 
 	private void eventInit() {
 		UseBlockCallback.EVENT.register(UseBlockEvents::LodestoneConversion);
+		LootTableLoadingCallback.EVENT.register(LootTableLoadingEvent::LootTableLoading);
 	}
 }
