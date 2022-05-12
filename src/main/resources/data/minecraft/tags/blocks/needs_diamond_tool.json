@@ -1,5 +1,7 @@
 {
   "replace": false,
   "values": [
+    "legendaryarmory:orichalcum_ore",
+    "legendaryarmory:deepslate_orichalcum_ore"
   ]
 }

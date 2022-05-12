@@ -41,6 +41,12 @@
   "item.legendaryarmory.gift_of_battle": "Gift of Battle",
 
   "block.legendaryarmory.mystic_forge": "Mystic Forge",
+  "block.legendaryarmory.orichalcum_ore": "Orichalcum Ore",
+  "block.legendaryarmory.mithril_ore": "Mithril Ore",
+  "block.legendaryarmory.platinum_ore": "Platinum Ore",
+  "block.legendaryarmory.deepslate_platinum_ore": "Deepslate Platinum Ore",
+  "block.legendaryarmory.deepslate_orichalcum_ore": "Deepslate Orichalcum Ore",
+  "block.legendaryarmory.deepslate_mithril_ore": "Deepslate Mithril Ore",
 
   "container.inventory": ""
 }

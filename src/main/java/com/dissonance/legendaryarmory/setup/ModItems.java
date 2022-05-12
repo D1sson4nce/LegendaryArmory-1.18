@@ -10,13 +10,20 @@ import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
+    public static final BlockItem MYSTIC_FORGE = new BlockItem(Blocks.MYSTIC_FORGE, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).rarity(Rarity.EPIC));
+    public static final BlockItem ORICHALCUM_ORE = new BlockItem(Blocks.ORICHALCUM_ORE, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
+    public static final BlockItem MITHRIL_ORE = new BlockItem(Blocks.MITHRIL_ORE, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
+    public static final BlockItem PLATINUM_ORE = new BlockItem(Blocks.PLATINUM_ORE, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
+    public static final BlockItem DEEPSLATE_PLATINUM_ORE = new BlockItem(Blocks.DEEPSLATE_PLATINUM_ORE, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
+    public static final BlockItem DEEPSLATE_MITHRIL_ORE = new BlockItem(Blocks.DEEPSLATE_MITHRIL_ORE, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
+    public static final BlockItem DEEPSLATE_ORICHALCUM_ORE = new BlockItem(Blocks.DEEPSLATE_ORICHALCUM_ORE, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
+
     public static final ToolItem TWILIGHT = new SwordItem(TwilightMaterial.INSTANCE, 0, -2F, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).fireproof().rarity(Rarity.EPIC));
     public static final ToolItem DUSK = new SwordItem(DuskMaterial.INSTANCE, 0, -2.4F, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).rarity(Rarity.RARE));
-    public static final BlockItem MYSTIC_FORGE = new BlockItem(Blocks.MYSTIC_FORGE, new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).rarity(Rarity.EPIC));
     public static final Item GIFT_OF_TWILIGHT = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).rarity(Rarity.EPIC));
     public static final Item ICY_RUNESTONE = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).rarity(Rarity.EPIC));
-    public static final Item SIGIL = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).rarity(Rarity.RARE));
     public static final Item GIFT_OF_METAL = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).rarity(Rarity.EPIC));
+    public static final Item SIGIL = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP).rarity(Rarity.RARE));
     public static final Item ORICHALCUM_INGOT = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
     public static final Item RAW_ORICHALCUM = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
     public static final Item MITHRIL_INGOT = new Item(new FabricItemSettings().group(Setup.LEGENDARY_ARMORY_GROUP));
@@ -53,6 +60,12 @@ public class ModItems {
 
     public static void register(){
         Registry.register(Registry.ITEM, new Identifier(LegendaryArmory.MODID, "mystic_forge"), MYSTIC_FORGE);
+        Registry.register(Registry.ITEM, new Identifier(LegendaryArmory.MODID, "orichalcum_ore"), ORICHALCUM_ORE);
+        Registry.register(Registry.ITEM, new Identifier(LegendaryArmory.MODID, "mithril_ore"), MITHRIL_ORE);
+        Registry.register(Registry.ITEM, new Identifier(LegendaryArmory.MODID, "platinum_ore"), PLATINUM_ORE);
+        Registry.register(Registry.ITEM, new Identifier(LegendaryArmory.MODID, "deepslate_mithril_ore"), DEEPSLATE_MITHRIL_ORE);
+        Registry.register(Registry.ITEM, new Identifier(LegendaryArmory.MODID, "deepslate_orichalcum_ore"), DEEPSLATE_ORICHALCUM_ORE);
+        Registry.register(Registry.ITEM, new Identifier(LegendaryArmory.MODID, "deepslate_platinum_ore"), DEEPSLATE_PLATINUM_ORE);
 
         Registry.register(Registry.ITEM, new Identifier(LegendaryArmory.MODID, "gift_of_twilight"), GIFT_OF_TWILIGHT);
         Registry.register(Registry.ITEM, new Identifier(LegendaryArmory.MODID, "icy_runestone"), ICY_RUNESTONE);

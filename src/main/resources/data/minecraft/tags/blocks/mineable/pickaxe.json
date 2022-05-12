@@ -1,6 +1,12 @@
 {
   "replace": false,
   "values": [
-    "legendaryarmory:mystic_forge"
+    "legendaryarmory:mystic_forge",
+    "legendaryarmory:orichalcum_ore",
+    "legendaryarmory:mithril_ore",
+    "legendaryarmory:platinum_ore",
+    "legendaryarmory:deepslate_orichalcum_ore",
+    "legendaryarmory:deepslate_mithril_ore",
+    "legendaryarmory:deepslate_platinum_ore"
   ]
 }

@@ -15,5 +15,6 @@ public class Setup {
         Entities.register();
         ScreenHandlers.register();
         Recipes.register();
+        World.generateWorldGen();
     }
 }
