@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "legendaryarmory",
-  "version": "1.0",
+  "version": "0.8.3",
 
   "name": "Legendary Armory",
   "description": "Epic game mod!",
   "authors": [
-    "Dissonance",
-    "Mylah"
+    "Dissonance"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
@@ -21,6 +20,9 @@
   "entrypoints": {
     "main": [
       "com.dissonance.legendaryarmory.LegendaryArmory"
+    ],
+    "client": [
+      "com.dissonance.legendaryarmory.LegendaryArmoryClient"
     ]
   },
   "mixins": [

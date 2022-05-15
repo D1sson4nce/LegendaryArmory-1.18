@@ -1,4 +1,4 @@
-package com.dissonance.world.ores;
+package com.dissonance.legendaryarmory.world.ores;
 
 import com.dissonance.legendaryarmory.setup.Blocks;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;

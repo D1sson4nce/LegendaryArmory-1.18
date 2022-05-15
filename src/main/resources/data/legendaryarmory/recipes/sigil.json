@@ -1,0 +1,27 @@
+{
+  "type": "legendaryarmory:mystic_forge",
+  "ingredients": [
+    {
+      "count": 1,
+      "item": "minecraft:totem_of_undying"
+    },
+    {
+      "count": 20,
+      "item": "legendaryarmory:glob_of_ectoplasm"
+    },
+    {
+      "count": 20,
+      "item": "legendaryarmory:glob_of_ectoplasm"
+    },
+    {
+      "count": 20,
+      "item": "legendaryarmory:glob_of_ectoplasm"
+    }
+  ],
+  "outputs": [
+    {
+      "item": "legendaryarmory:sigil"
+    }
+  ],
+  "successRate": 100
+}

@@ -48,5 +48,14 @@
   "block.legendaryarmory.deepslate_orichalcum_ore": "Deepslate Orichalcum Ore",
   "block.legendaryarmory.deepslate_mithril_ore": "Deepslate Mithril Ore",
 
+  "advancements.legendaryarmory.root.title": "Legendary Armory",
+  "advancements.legendaryarmory.root.description": "",
+  "advancements.legendaryarmory.precursor.title": "That's a quality weapon!",
+  "advancements.legendaryarmory.precursor.description": "Acquire a precursor",
+  "advancements.legendaryarmory.legendary.title": "Thanks! Take a look",
+  "advancements.legendaryarmory.legendary.description": "Acquire a legendary",
+
+  "enchantment.legendaryarmory.carving": "Carving",
+
   "container.inventory": ""
 }

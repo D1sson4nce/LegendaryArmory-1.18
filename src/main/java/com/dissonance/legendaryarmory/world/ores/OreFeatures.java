@@ -1,4 +1,4 @@
-package com.dissonance.world.ores;
+package com.dissonance.legendaryarmory.world.ores;
 
 import net.minecraft.world.gen.placementmodifier.*;
 

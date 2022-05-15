@@ -19,6 +19,7 @@ public class MobIdentifiers {
     public static final Identifier GUARDIAN_ID = EntityType.GUARDIAN.getLootTableId();
     public static final Identifier HOGLIN_ID = EntityType.HOGLIN.getLootTableId();
     public static final Identifier HUSK_ID = EntityType.HUSK.getLootTableId();
+    public static final Identifier ILLUSIONER_ID = EntityType.ILLUSIONER.getLootTableId();
     public static final Identifier MAGMA_CUBE_ID = EntityType.MAGMA_CUBE.getLootTableId();
     public static final Identifier PHANTOM_ID = EntityType.PHANTOM.getLootTableId();
     public static final Identifier PIGLIN_BRUTE_ID = EntityType.PIGLIN_BRUTE.getLootTableId();
@@ -39,4 +40,10 @@ public class MobIdentifiers {
     public static final Identifier ZOMBIE_VILLAGER_ID = EntityType.ZOMBIE_VILLAGER.getLootTableId();
     public static final Identifier ZOMBIE_HORSE_ID = EntityType.ZOMBIE_HORSE.getLootTableId();
     public static final Identifier WITHER_ID = EntityType.WITHER.getLootTableId();
+    public static final Identifier POLAR_BEAR_ID = EntityType.POLAR_BEAR.getLootTableId();
+    public static final Identifier PANDA_ID = EntityType.PANDA.getLootTableId();
+    public static final Identifier FOX_ID = EntityType.FOX.getLootTableId();
+    public static final Identifier TURTLE_ID = EntityType.TURTLE.getLootTableId();
+    public static final Identifier PUFFERFISH_ID = EntityType.PUFFERFISH.getLootTableId();
+    public static final Identifier WANDERING_TRADER_ID = EntityType.WANDERING_TRADER.getLootTableId();
 }

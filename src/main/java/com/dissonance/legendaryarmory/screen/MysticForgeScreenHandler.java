@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ArrayPropertyDelegate;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.Slot;
 
 public class MysticForgeScreenHandler extends ScreenHandler {

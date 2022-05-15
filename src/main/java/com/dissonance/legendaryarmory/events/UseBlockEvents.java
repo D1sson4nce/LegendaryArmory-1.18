@@ -10,11 +10,11 @@ import net.minecraft.world.World;
 public class UseBlockEvents {
     public static ActionResult LodestoneConversion(PlayerEntity player, World world, Hand hand, BlockHitResult hitResult){
         if(player.isSpectator()){
-            return ActionResult.FAIL;
+            return ActionResult.PASS;
         }
 
         if(hand.name().equals("OFF_HAND")){
-            return ActionResult.FAIL;
+            return ActionResult.PASS;
         }
 
         var block = world.getBlockState(hitResult.getBlockPos()).getBlock();
