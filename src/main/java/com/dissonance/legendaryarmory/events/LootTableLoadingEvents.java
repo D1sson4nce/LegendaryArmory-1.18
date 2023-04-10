@@ -3,12 +3,11 @@ package com.dissonance.legendaryarmory.events;
 import com.dissonance.legendaryarmory.events.loottableids.ChestIdentifiers;
 import com.dissonance.legendaryarmory.events.loottableids.MobIdentifiers;
 import com.dissonance.legendaryarmory.setup.ModItems;
-import net.fabricmc.fabric.api.loot.v1.FabricLootPoolBuilder;
-import net.fabricmc.fabric.api.loot.v1.FabricLootSupplierBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
-import net.minecraft.data.server.BlockLootTableGenerator;
+import net.fabricmc.fabric.api.loot.v2.LootTableSource;
 import net.minecraft.item.ToolItem;
 import net.minecraft.loot.LootManager;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.LootTable;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
@@ -21,17 +20,17 @@ import net.minecraft.util.collection.DefaultedList;
 public class LootTableLoadingEvents {
     private static final DefaultedList<ToolItem> precursors = DefaultedList.ofSize(1, ModItems.DUSK);
 
-    static public void LootTableLoading(ResourceManager resourceManager, LootManager manager, Identifier id, FabricLootSupplierBuilder supplier, LootTableLoadingCallback.LootTableSetter setter){
+    static public void LootTableLoading(ResourceManager resourceManager, LootManager lootManager, Identifier id, LootTable.Builder supplier, LootTableSource source){
         setPrecursors();
         for (ToolItem precursor: precursors) {
-            var precursorMobPoolBuilder = FabricLootPoolBuilder.builder()
+            var precursorMobPoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.0001F))
                     .with(ItemEntry.builder(precursor));
 
             setAllHostileMobs(id, supplier, precursorMobPoolBuilder);
 
-            var precursorChestPoolBuilder = FabricLootPoolBuilder.builder()
+            var precursorChestPoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.001F))
                     .with(ItemEntry.builder(precursor));
@@ -63,12 +62,12 @@ public class LootTableLoadingEvents {
         }
 
         {
-            var DungeonDropsChestPoolBuilder = FabricLootPoolBuilder.builder()
+            var DungeonDropsChestPoolBuilder = LootPool.builder()
                     .conditionally(RandomChanceLootCondition.builder(0.34F))
                     .with(ItemEntry.builder(ModItems.DUNGEON_DROPS))
-                    .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1F, 5F)).build())
-                    .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(1F, 6F)).build())
-                    .withFunction(SetCountLootFunction.builder(UniformLootNumberProvider.create(0F, 7F)).build());
+                    .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1F, 5F)).build())
+                    .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1F, 6F)).build())
+                    .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(0F, 7F)).build());
 
             if (ChestIdentifiers.MINECART_CHEST_ID.equals(id)) supplier.pool(DungeonDropsChestPoolBuilder);
             if (ChestIdentifiers.MINESHAFT_CHEST_ID.equals(id)) supplier.pool(DungeonDropsChestPoolBuilder);
@@ -89,35 +88,35 @@ public class LootTableLoadingEvents {
         }
 
         {
-            var ancientBonePoolBuilder = FabricLootPoolBuilder.builder()
+            var ancientBonePoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.125F))
                     .with(ItemEntry.builder(ModItems.ANCIENT_BONE));
-            var clawPoolBuilder = FabricLootPoolBuilder.builder()
+            var clawPoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.125F))
                     .with(ItemEntry.builder(ModItems.CLAW));
-            var scalePoolBuilder = FabricLootPoolBuilder.builder()
+            var scalePoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.125F))
                     .with(ItemEntry.builder(ModItems.SCALE));
-            var fangPoolBuilder = FabricLootPoolBuilder.builder()
+            var fangPoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.125F))
                     .with(ItemEntry.builder(ModItems.FANG));
-            var crystallineDustPoolBuilder = FabricLootPoolBuilder.builder()
+            var crystallineDustPoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.125F))
                     .with(ItemEntry.builder(ModItems.CRYSTALLINE_DUST));
-            var totemPoolBuilder = FabricLootPoolBuilder.builder()
+            var totemPoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.125F))
                     .with(ItemEntry.builder(ModItems.TOTEM));
-            var venomSacPoolBuilder = FabricLootPoolBuilder.builder()
+            var venomSacPoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.125F))
                     .with(ItemEntry.builder(ModItems.VENOM_SAC));
-            var vialOfBloodPoolBuilder = FabricLootPoolBuilder.builder()
+            var vialOfBloodPoolBuilder = LootPool.builder()
                     .rolls(ConstantLootNumberProvider.create(1))
                     .conditionally(RandomChanceLootCondition.builder(0.125F))
                     .with(ItemEntry.builder(ModItems.VIAL_OF_BLOOD));
@@ -212,21 +211,21 @@ public class LootTableLoadingEvents {
             }
         }
 
-        var ectoplasmPoolBuilder = FabricLootPoolBuilder.builder()
+        var ectoplasmPoolBuilder = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
                 .conditionally(RandomChanceLootCondition.builder(0.0625F))
                 .with(ItemEntry.builder(ModItems.GLOB_OF_ECTOPLASM));
 
         setAllHostileMobs(id, supplier, ectoplasmPoolBuilder);
 
-        var giftOfBattlePoolBuilder = FabricLootPoolBuilder.builder()
+        var giftOfBattlePoolBuilder = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
                 .conditionally(RandomChanceLootCondition.builder(0.125F))
                 .with(ItemEntry.builder(ModItems.GIFT_OF_BATTLE));
 
         if(MobIdentifiers.WITHER_ID.equals(id)) supplier.pool(giftOfBattlePoolBuilder);
 
-        var giftOfExplorationPoolBuilder = FabricLootPoolBuilder.builder()
+        var giftOfExplorationPoolBuilder = LootPool.builder()
                 .rolls(ConstantLootNumberProvider.create(1))
                 .conditionally(RandomChanceLootCondition.builder(0.25F))
                 .with(ItemEntry.builder(ModItems.GIFT_OF_EXPLORATION));
@@ -238,7 +237,7 @@ public class LootTableLoadingEvents {
         precursors.set(0, ModItems.DUSK);
     }
 
-    private static void setAllHostileMobs(Identifier id, FabricLootSupplierBuilder supplier, FabricLootPoolBuilder mobPoolBuilder){
+    private static void setAllHostileMobs(Identifier id, LootTable.Builder supplier, LootPool.Builder mobPoolBuilder){
         if(MobIdentifiers.BLAZE_ID.equals(id)) supplier.pool(mobPoolBuilder);
         if(MobIdentifiers.CAVE_SPIDER_ID.equals(id)) supplier.pool(mobPoolBuilder);
         if(MobIdentifiers.CREEPER_ID.equals(id)) supplier.pool(mobPoolBuilder);

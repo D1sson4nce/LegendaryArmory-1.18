@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "legendaryarmory:item/dungeon_drops"
+    "layer0": "legendaryarmory:item/tale_of_dungeon_delving"
   }
 }

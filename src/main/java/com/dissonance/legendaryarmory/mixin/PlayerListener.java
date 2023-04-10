@@ -3,8 +3,6 @@ package com.dissonance.legendaryarmory.mixin;
 import com.dissonance.legendaryarmory.setup.ModItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.collection.DefaultedList;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -19,8 +17,10 @@ public class PlayerListener {
 
     @Inject(method = "addExperienceLevels", at = @At("HEAD"))
     protected void injectLevelMethod(int levels, CallbackInfo info){
-        var spiritShards = new ItemStack(ModItems.SPIRIT_SHARD, levels);
-        inventory.insertStack(spiritShards);
+        if(levels > 0){
+            var spiritShards = ModItems.SPIRIT_SHARD.getDefaultStack();
+            inventory.insertStack(spiritShards);
+        }
     }
 }
 

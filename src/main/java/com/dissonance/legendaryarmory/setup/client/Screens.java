@@ -7,12 +7,13 @@ import com.dissonance.legendaryarmory.screen.MysticForgeScreenHandler;
 import com.dissonance.legendaryarmory.setup.ScreenHandlers;
 import net.fabricmc.fabric.api.client.screenhandler.v1.ScreenRegistry;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.util.Identifier;
 
 public class Screens {
 
     public static void register(){
-        ScreenRegistry.register(ScreenHandlers.MYSTIC_FORGE_SCREEN_HANDLER, MysticForgeScreen::new);
+        HandledScreens.register(ScreenHandlers.MYSTIC_FORGE_SCREEN_HANDLER, MysticForgeScreen::new);
     }
 }

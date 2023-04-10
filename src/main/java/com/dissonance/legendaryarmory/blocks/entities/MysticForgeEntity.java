@@ -6,19 +6,22 @@ import com.dissonance.legendaryarmory.screen.MysticForgeScreenHandler;
 import com.dissonance.legendaryarmory.setup.Entities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 import net.minecraft.nbt.NbtCompound;
+import net.minecraft.nbt.NbtList;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.PropertyDelegate;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
@@ -66,7 +69,7 @@ public class MysticForgeEntity extends BlockEntity implements NamedScreenHandler
 
     @Override
     public Text getDisplayName() {
-        return new TranslatableText(getCachedState().getBlock().getTranslationKey());
+        return Text.translatable(getCachedState().getBlock().getTranslationKey());
     }
 
     @Nullable
@@ -127,7 +130,14 @@ public class MysticForgeEntity extends BlockEntity implements NamedScreenHandler
     private static void craftItem(MysticForgeEntity entity){
         var world = entity.world;
         var inventory = new SimpleInventory(entity.inventory.size());
+
+        NbtList precursorEnchantments = null;
         for (int i = 0; i < entity.inventory.size(); i++) {
+            var input = entity.getStack(i);
+            if(input.getItem() instanceof SwordItem && input.hasEnchantments()){
+                precursorEnchantments = input.getEnchantments();
+            }
+
             inventory.setStack(i, entity.getStack(i));
         }
 
@@ -141,7 +151,18 @@ public class MysticForgeEntity extends BlockEntity implements NamedScreenHandler
             var chance = rng.nextFloat(100);
             var adds = chance < match.get().getSuccessRate() ? 1 : 0;
 
-            entity.setStack(4, new ItemStack(match.get().getOutput().getItem(), entity.getStack(4).getCount() + adds));
+            var output = new ItemStack(match.get().getOutput().getItem(), entity.getStack(4).getCount() + adds);
+            if(precursorEnchantments != null){
+                for (int i = 0; i < precursorEnchantments.size(); i++) {
+                    NbtCompound enchantmentCompound = precursorEnchantments.getCompound(i);
+                    Registry.ENCHANTMENT.getOrEmpty(EnchantmentHelper.getIdFromNbt(enchantmentCompound)).ifPresent((e) -> {
+                        var enchantment = e;
+                        output.addEnchantment(enchantment, enchantmentCompound.getShort("lvl"));
+                    });
+                }
+            }
+
+            entity.setStack(4, output);
 
             entity.resetProgress();
         }
@@ -166,8 +187,6 @@ public class MysticForgeEntity extends BlockEntity implements NamedScreenHandler
             foundSlots.set(3, true);
             inventory.removeStack(3, inputs.get(inputIndex).getCount());
             smartMatchRemoveStacks(inventory, ++inputIndex, foundSlots, inputs);
-        }else{
-            return;
         }
     }
 }

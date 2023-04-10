@@ -7,7 +7,8 @@ import com.dissonance.legendaryarmory.setup.Setup;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.player.PlayerBlockBreakEvents;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
+import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.minecraft.loot.LootTable;
 
 public class LegendaryArmory implements ModInitializer {
 	public static final String MODID = "legendaryarmory";
@@ -20,7 +21,7 @@ public class LegendaryArmory implements ModInitializer {
 
 	private void eventInit() {
 		UseBlockCallback.EVENT.register(UseBlockEvents::LodestoneConversion);
-		LootTableLoadingCallback.EVENT.register(LootTableLoadingEvents::LootTableLoading);
+		LootTableEvents.MODIFY.register(LootTableLoadingEvents::LootTableLoading);
 		PlayerBlockBreakEvents.BEFORE.register(BlockBreakEvents::replaceObsidianDrop);
 	}
 }

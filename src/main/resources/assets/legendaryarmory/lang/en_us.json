@@ -18,7 +18,7 @@
   "item.legendaryarmory.onyx_lodestone": "Onyx Lodestone",
   "item.legendaryarmory.obsidian_shard": "Obsidian Shard",
   "item.legendaryarmory.gift_of_ascalon": "Gift of Ascalon",
-  "item.legendaryarmory.dungeon_drops": "Dungeon Drops",
+  "item.legendaryarmory.dungeon_drops": "Tale of Dungeon Delving",
   "item.legendaryarmory.gift_of_fortune": "Gift of Fortune",
   "item.legendaryarmory.glob_of_ectoplasm": "Glob of Ectoplasm",
   "item.legendaryarmory.mystic_clover": "Mystic Clover",
@@ -56,6 +56,7 @@
   "advancements.legendaryarmory.legendary.description": "Acquire a legendary",
 
   "enchantment.legendaryarmory.carving": "Carving",
+  "enchantment.legendaryarmory.carving.desc": "Allows the drop of obsidian shards when mining obsidian",
 
   "container.inventory": ""
 }

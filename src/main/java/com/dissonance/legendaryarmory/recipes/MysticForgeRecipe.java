@@ -1,8 +1,10 @@
 package com.dissonance.legendaryarmory.recipes;
 
 import com.dissonance.legendaryarmory.blocks.MysticForgeBlock;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.SwordItem;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.Recipe;
 import net.minecraft.recipe.RecipeSerializer;
@@ -84,6 +86,13 @@ public class MysticForgeRecipe implements Recipe<SimpleInventory> {
     public ItemStack getOutput() {
         var rng = new Random();
         var output = outputs.get(rng.nextInt(outputs.size()));
+
+        if(output.getItem() instanceof SwordItem){
+            Enchantments enchantments;
+            for (var input: getInputs()) {
+
+            }
+        }
 
         return output.copy();
     }
